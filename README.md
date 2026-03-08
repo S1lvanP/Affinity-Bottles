@@ -10,13 +10,13 @@ I don't know anything about the technical details that make this work. This is j
  https://store.serif.com/de/update/windows/designer/2/
  https://store.serif.com/de/update/windows/publisher/2/)
  - install Bottles (this guide assumes the flatpak version is installed)
- - download the Recipe.yml file (from this project or the forum link mentioned above)
- - go to Settings>Runners and install caffe-9.7 (or the latest version)
+ - download the `Recipe.yml` file (from this project or the forum link mentioned above)
+ - go to Settings>Runners and install `caffe-9.7` (or the latest version)
  - create a new Bottle:
 	 - type: custom
 	 - runner: caffe-9.7
 	 - import config: choose the .yml file 
- - add application, e.g. affinity-photo-msi-2.6.5.exe
+ - add application, e.g. `affinity-photo-msi-2.6.5.exe`
  - run the installer (ignore the errors)
  - go to the main menu and back into bottle so the installed program shows up
  - run
@@ -26,5 +26,6 @@ I don't know anything about the technical details that make this work. This is j
    - `mkdir windows/system32/WinMetadata/`
    - `curl --output windows/system32/WinMetadata/Windows.winmd --location https://github.com/microsoft/windows-rs/raw/master/crates/libs/bindgen/default/Windows.winmd`
 - in your bottle>Settings>runner change to `soda-9.0-1` (or latest)
+- to avoid context menus rendering blacked-out, enable `virtual desktop` under advanced settings in your bottle
 - start the installed Photo programm
 - when installing multiple Affinity programs/versions, just make sure to use caffe for the installation and switch to soda to run them
